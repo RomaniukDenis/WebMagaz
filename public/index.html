@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web_magaz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+</head>
+<body class="inbody">
+    
+    <header><p>Хочеш что то заказать? У нас самая быстрая доставка!</p><div id="profile"><a href="login.html">Log in</a></div><button id="cartBtn" onclick="OpenCart()">Cart</button</div></header>
+    <content>
+        <div class="cimg"> <img src="Без_названия-removebg-preview (1).png" alt="">      <nav>
+            <a href="addproduct.html">Add Product</a>
+        </nav> </div>
+        <div class="bimg"> <img src="images-removebg-preview.png" alt="">      <nav>
+            <a id="reg" href="register.html">Register</a>
+        </nav> </div>
+
+
+            <div class="produts" id="shop">        <h1>Web Magaz</h1>Products: <a href="shop.html"> Shop</a></div>
+
+
+        <br>
+        <div class="add">
+            Поддержано: <a href="http://kosmokit.zzz.com.ua">Kosmokit</a>
+        </div>
+    </content>
+
+    <div id="cart" class="cartWindow">
+        <h1>Cart</h1>
+        <div id="cart_grid"></div>
+        <button class="payBtn" onclick="Pay()">Pay</button>
+    </div>
+</body>
+<script src="cart.js"></script>
+<script>
+    let cart = document.getElementById("cart");
+    cart.hidden = true;
+    function OpenCart(){
+        if(cart.hidden){
+            cart.hidden = false;
+        }
+        else if(!cart.hidden){
+            cart.hidden = true;
+        }
+    }
+    function Pay(){
+        window.location = "pay.html";
+    }
+</script>
+</html>
